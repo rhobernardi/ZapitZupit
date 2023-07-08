@@ -7,7 +7,7 @@ LABEL org.label-schema.license="GPL-3.0" \
 
 EXPOSE 8000
 
-ADD zapitzupit.py requirements.txt setup.py .env ./
+ADD zapitzupit.py requirements.txt setup.py ./
 
 RUN apt-get update \
 	&& apt-get -y install tesseract-ocr
