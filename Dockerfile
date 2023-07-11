@@ -14,7 +14,7 @@ RUN pip install Flask
 RUN pip install -r requirements.txt
 RUN python setup.py
 
-RUN python zapitzupit.py &
+RUN run.sh &
 
 CMD ["python", "index.py"]
 
