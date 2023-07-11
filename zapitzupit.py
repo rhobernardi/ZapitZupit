@@ -12,6 +12,8 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 number_regex = "\s*\(?(\d{2}|\d{0})\)?[-. ]?(\d?\s?\d{4}|\d{4})[-. ]?(\d{4})[-. ]?\s*"
 
+venv_path = ""
+
 # Configure bot
 try:
     bot = telebot.TeleBot(API_KEY)

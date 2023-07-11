@@ -12,6 +12,6 @@ RUN apt-get update \
 RUN pip install -r requirements.txt
 RUN python setup.py
 
-CMD ["python", "zapitzupit.py"]
+CMD ["python", "zapitzupit.py", "&"]
 
 EXPOSE 80/tcp
