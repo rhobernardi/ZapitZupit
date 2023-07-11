@@ -5,8 +5,6 @@ LABEL org.label-schema.license="GPL-3.0" \
 	org.label-schema.vendor="ZapitZupit Project" \
 	maintainer="Rodrigo Bernardi"
 
-EXPOSE 8000
-
 ADD zapitzupit.py requirements.txt setup.py ./
 
 RUN apt-get update \
@@ -15,3 +13,5 @@ RUN pip install -r requirements.txt
 RUN python setup.py
 
 CMD ["python", "zapitzupit.py"]
+
+EXPOSE 80/tcp
