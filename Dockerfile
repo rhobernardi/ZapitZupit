@@ -9,9 +9,12 @@ ADD zapitzupit.py requirements.txt setup.py ./
 
 RUN apt-get update \
 	&& apt-get -y install tesseract-ocr
+RUN pip install Flask
 RUN pip install -r requirements.txt
 RUN python setup.py
 
-CMD ["python", "zapitzupit.py", "&"]
+RUN python zapitzupit.py &
+
+CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
 
 EXPOSE 80/tcp
