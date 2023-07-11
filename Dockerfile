@@ -16,6 +16,6 @@ RUN python setup.py
 
 RUN python zapitzupit.py &
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
+CMD ["flask", "run", "--app", "index.py", "--host=0.0.0.0", "--port=80"]
 
 EXPOSE 80/tcp
