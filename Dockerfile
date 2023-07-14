@@ -5,17 +5,13 @@ LABEL org.label-schema.license="GPL-3.0" \
 	org.label-schema.vendor="ZapitZupit Project" \
 	maintainer="Rodrigo Bernardi"
 
-ADD index.py ./
-ADD zapitzupit.py requirements.txt setup.py ./
+ADD zapitzupit.py requirements.txt ImageReaderAI.py log.py ./
+
+RUN mkdir -p /log/
+RUN mkdir -p /img/
 
 RUN apt-get update \
-	&& apt-get -y install tesseract-ocr
-RUN pip install Flask
+	&& apt-get -y install tesseract-ocr libgl1-mesa-glx
 RUN pip install -r requirements.txt
-RUN python setup.py
 
-RUN run.sh &
-
-CMD ["python", "index.py"]
-
-EXPOSE 80/tcp
+CMD ["python", "zapitzupit.py"]
