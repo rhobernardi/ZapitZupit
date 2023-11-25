@@ -5,6 +5,7 @@ LABEL org.label-schema.license="GPL-3.0" \
 	org.label-schema.vendor="ZapitZupit Project" \
 	maintainer="Rodrigo Bernardi"
 
+ADD .env ./
 ADD zapitzupit.py requirements.txt ImageReaderAI.py log.py ./
 
 RUN mkdir -p /log/
