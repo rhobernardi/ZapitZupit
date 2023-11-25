@@ -1,5 +1,5 @@
 # ZapitZupit
-A bot that receive phone numbers via text or photos and generate WhatsApp links without add a stranger contact.
+A telegram bot that receive phone numbers via text or images and generate WhatsApp links to send messages without add a stranger contact to your phone.
 
 ## Compile
 ```
