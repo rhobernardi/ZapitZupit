@@ -1,13 +1,19 @@
 # ZapitZupit
 A telegram bot that receive phone numbers via text or images and generate WhatsApp links to send messages without add a stranger contact to your phone.
 
-## Compile in Docker
+## Configure autostart
+```bash
+$ crontab -e
+```
+Add line `@reboot /bin/bash -c "/full/path/to/telebot/autostart.sh"` to crontab and reboot.
+
+## Compile for local usage
 ```bash
 $ source config.sh
 $ bot-install [API_KEY]
 ```
 
-## Running
+## Running local
 ```bash
 $ bot-run
 ```
